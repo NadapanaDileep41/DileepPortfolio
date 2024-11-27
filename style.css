@@ -1,0 +1,279 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Section */
+.profile-about-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #0073e6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #005bb5;
+}
+
+/* About Section with Matching Background */
+.profile-about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Add spacing between image and content */
+    padding: 20px;
+    background-color: #fff; /* Match Education and Skills background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+/* Education and Skills Section */
+.education-skills-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping for small screens */
+    margin-bottom: 30px;
+}
+
+.education-card, .skills-card {
+    flex: 1; /* Distribute space evenly */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Prevents cards from becoming too small */
+}
+
+.education-card h2, .skills-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.education-item, .skills-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.education-item h3 {
+    font-size: 1.2rem;
+}
+
+.skills-card ul li {
+    margin-bottom: 10px;
+}
+
+.skills-card ul li i {
+    margin-right: 10px;
+}
+
+/* Projects Section */
+.projects-container {
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.projects-row {
+    display: grid; /* Switch to grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between projects */
+}
+
+.project-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+.project-item p {
+    font-size: 0.95rem;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+/* Ensure 3 projects stay in a row even on smaller screens */
+@media (max-width: 768px) {
+    .projects-row {
+        grid-template-columns: repeat(3, 1fr); /* Forces 3 columns */
+        overflow-x: auto; /* Enables horizontal scrolling if necessary */
+    }
+
+    .projects-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Certifications Section */
+.certifications-card {
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden; /* Prevents overflow of grid items */
+}
+
+.certifications-grid {
+    display: grid; /* Switch from flexbox to grid for precise control */
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px;
+}
+
+.certification-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.certification-item h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.certification-item p {
+    font-size: 0.9rem;
+}
+
+/* Ensure 4 certificates stay in a row even on small screens */
+@media (max-width: 768px) {
+    .certifications-grid {
+        grid-template-columns: repeat(4, 1fr); /* Forces 4 columns */
+        overflow-x: auto; /* Adds horizontal scroll if content overflows */
+    }
+
+    .certifications-card {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+/* Contact and Achievements Section */
+.contact-achievements-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card,
+.achievements-card {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card ul,
+.achievements-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-card li,
+.achievements-card li {
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-about-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-skills-section {
+        flex-direction: column; /* Stacks Education and Skills vertically */
+        gap: 30px;
+    }
+
+    .projects-row {
+        flex-direction: column; /* Stacks the projects */
+    }
+
+    .certifications-grid {
+        flex-direction: column; /* Stacks the certifications */
+    }
+
+    .contact-achievements-section {
+        flex-direction: column; /* Stacks Contact and Achievements */
+    }
+
+    .project-item, .certification-item {
+        width: 100%; /* Stacks items vertically */
+    }
+
+    .contact-card, .achievements-card {
+        margin-top: 20px;
+    }
+}
+
+/* Change all Font Awesome icon colors to navy blue */
+i {
+    color: #3d52a0; /* Navy blue color */
+}
